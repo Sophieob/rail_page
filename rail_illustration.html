@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The SCCS Rail Journey</title>
+	<style>
+		.container {
+      max-width: 550px;
+      max-height: 600px;
+			position: relative;
+			color: white;
+		}
+		.button {
+			position: absolute;
+			background-color: #f03333;
+			color: white;
+			font-size: 6px;
+			padding: 7px;
+			border: none;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		.button span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 6px;
+			font-weight: bold;
+		}
+     /* Adjust button position for smaller screens */
+     @media only screen and (max-width: 767px) {
+     .button span {
+     top: 70%;
+  }
+       /* Adjust button position for larger screens */
+    @media only screen and (min-width: 1200px) {
+    .btn {
+    top: 30%;
+  }
+}
+}
+		.button1 {
+			top: 241px;
+			left: 455px
+		}
+		.button2 {   
+			     top: 330px;
+		       left: 110px
+		}
+                 .button3 {
+            top: 176px;
+            left: 190px;
+        }
+        .button4 {
+            top: 185px;
+            left: 292px;
+        }
+         .button5 {
+           top: 275px;
+		       left: 390px
+        }
+          .button6 {
+            top: 265px;
+		        left: 375px
+        }
+            .button7 {
+            top: 330px;
+		       left: 355px
+        }
+           .button8 {
+            top: 433px;
+            left: 156px;
+        }
+          .button9 {
+            top: 461px;
+		       left: 413px
+       }
+        .button10 {
+           top: 392px;
+            left: 250px;
+       }
+            .button11 {
+            top: 156px;
+            left: 445px;
+        }
+            .button12 {
+            top: 148px;
+            left: 335px;
+        }
+            .button13 {
+            top: 182px;
+            left: 428px;
+        }
+           .button14 {
+            top: 210px;
+            left: 500px;
+        }
+            .button15 {
+            top: 64px;
+            left: 459px;
+        }
+             .button16 {
+            top: 308px;
+		       left: 358px
+        }
+            .button17 {
+            top: 330px;
+		       left: 355px
+        }
+            .button18 {
+            top: 372px;
+		       left: 320px
+        }
+             .button19 {
+            top: 265px;
+            left: 192px;
+        }
+            .button20 {
+            top: 293px;
+		        left: 295px
+        }
+           .button21 {
+			top: 267px;
+			left: 443px
+		}
+            .button22 {
+			      top: 107px;
+            left: 50px;
+		}
+             .button23 {
+			      top: 107px;
+            left: 128px;
+		}
+             .button24 {
+			      top: 107px;
+            left: 172px;
+		}
+             .button25 {
+		       top: 344px;
+		       left: 400px
+		}
+              .button26 {
+			      top: 107px;
+            left: 93px;
+		}
+               .button27 {
+			     top: 365px;
+		       left: 380px
+		}
+                .button28 {
+            top: 272px;
+		        left: 325px
+        }
+             .button29 {
+            top: 377px;
+            left: 70px;
+        }
+          .button30 {
+            top: 397px;
+            left: 100px;
+        }
+    .modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+		.modal-content {
+	    background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 20%;
+            text-align: center;
+            position: relative;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+		}
+.modal-content p {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: black;
+        }
+.modal-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 1px;
+			color: red;
+			cursor: pointer;
+		}
+         /* media queries */
+		@media screen and (max-width: 768px) {
+			.button1, .button2 {
+				position: static;
+				margin: 20px auto;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://www.sccssurvey.co.uk/media/wysiwyg/Rail_illustration-min_5.png" alt="Rail illustration" style="width:550px;height:600px;">
+	    <button class="button button1"><span>1</span></button>
+	    <button class="button button2"><span>2</span></button>
+        <button class="button button3"><span>3</span></button>
+        <button class="button button4"><span>4</span></button>
+        <button class="button button5"><span>5</span></button>
+        <button class="button button6"><span>6</span></button>
+        <button class="button button7"><span>7</span></button>
+        <button class="button button8"><span>8</span></button>
+        <button class="button button9"><span>9</span></button>
+        <button class="button button10"><span>10</span></button>
+        <button class="button button11"><span>11</span></button>
+        <button class="button button12"><span>12</span></button>
+        <button class="button button13"><span>13</span></button>
+        <button class="button button14"><span>14</span></button>
+        <button class="button button15"><span>15</span></button>
+        <button class="button button16"><span>16</span></button>
+        <button class="button button17"><span>17</span></button>
+        <button class="button button18"><span>18</span></button>
+        <button class="button button19"><span>19</span></button>
+        <button class="button button20"><span>20</span></button>
+        <button class="button button21"><span>21</span></button>
+        <button class="button button22"><span>22</span></button>
+        <button class="button button23"><span>23</span></button>
+        <button class="button button24"><span>24</span></button>
+        <button class="button button25"><span>25</span></button>
+        <button class="button button26"><span>26</span></button>
+        <button class="button button27"><span>27</span></button>
+        <button class="button button28"><span>28</span></button>
+        <button class="button button29"><span>5</span></button>
+        <button class="button button30"><span>6</span></button>
+       
+		<div id="myModal1" class="modal">
+            <div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+              <span class="close">&times;</span>
+              <h2>Leica Zeno FLX100 Smart Antenna</h2>
+              <p>The Leica Zeno FLX100 smart antenna captures spatial data in a simple and flexible way allowing you the freedom to work how you want.</p>
+              <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leice_zeno_flx100_smartantenna_front.webp" alt="Leica" style="width: 100px; height: 100px;">
+              <p><a href="https://www.sccssurvey.co.uk/leica-zeno-flx100-smart-antenna.html" target="_blank">Learn more.</a></p>
+            </div>
+          </div>
+          <div id="myModal2" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica GS18 I GNSS RTK Rover</h2>
+				<p>Meet the Leica GS18 I GNSS RTK rover with Visual Positioning. With it you can effortlessly measure points you couldn’t reach before. </p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/g/s/gs18i_2.webp" alt="GNSS" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-gs18i.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+                 <div id="myModal3" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica GM30 Receiver</h2>
+				<p>Future-proof and intelligent, this instrument delivers the highest quality results round the clock.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/g/m/gm30_front_left.webp" alt="GM30" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-gm30-receiver.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+                  <div id="myModal4" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica LS15 Digital Level</h2>
+				<p>From measuring roads, railways, bridges or other structures, the Leica LS Digital Levels provide reassurance and ease to an extensive range of complicated levelling applications.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-ls15-level-_1.webp" alt="LS15" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-ls15-digital-level.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+             <div id="myModal5" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica Nova MS60 MultiStation</h2>
+				<p>The new version of Leica Nova MS60, the world’s first MultiStation, allows you to complete all surveying tasks with one instrument.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-nova-ms60-right_1.webp" alt="MS60" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-nova-ms60-multistation.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+                <div id="myModal6" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica AP20 AutoPole</h2>
+				<p>The Leica AP20 AutoPole is a unique smart solution for our automated total stations that boosts on-site productivity.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica_ap20_autopole.webp" alt="AP20" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-ap20-autopole.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal7" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>IDS GeoRadar - Stream C IDS GeoRadar - Stream C</h2>
+				<p>High quality, High productivity and Simple to Use compact radar system for real time underground surveys.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/s/t/streamc.webp" alt="Steam C" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-ap20-autopole.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+             <div id="myModal8" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica DSX Utility Detection Solution</h2>
+				<p>For utility repair and maintenance, civil engineering and surveying companies, the Leica DSX utility detection solution, consisting of portable hardware with intuitive software allows to easily locate, visualise and map utilities. </p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica_dsx_utility_detection_solution_1.webp" alt="Leica DSX Utility Detection Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-dsx-utility-detection-solution.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+         <div id="myModal9" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Stream T</h2>
+				<p>The revolutionary contactless GPR for tunnel inspection</p>
+                <img src="https://idsgeoradar.com/-/media/images/uncategorized/800x428.ashx" alt="Leica DSX Utility Detection Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://idsgeoradar.com/products/ground-penetrating-radar/stream-t" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+        <div id="myModal10" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>SRS SafeRailSystem</h2>
+				<p>Safe railway ballast inspections with ground penetrating radar</p>
+                <img src="https://idsgeoradar.com/-/media/images/ids%20georadar/key%20visuals%202480x750/srs%20saferailsystem-2480x750.ashx?h=750&la=en&w=2480&hash=03EC8DA57E6EE2A65B069F0F48111300" alt="Leica DSX Utility Detection Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://idsgeoradar.com/products/ground-penetrating-radar/srs-saferailsystem" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal11" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica iCON GPS 60 GNSS Smart Antenna</h2>
+				<p>The Leica iCON GPS 60 GNSS Smart Antenna is an impressive and versatile SmartAntenna for on-site positioning projects. </p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/i/c/icon_gps_60_front.webp" alt="Leica DSX Utility Detection Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-icon-gps-60.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+             <div id="myModal12" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica MC1 3D machine control software</h2>
+				<p>To support the digitisation of the heavy construction industry, Leica Geosystems offers a revolutionising software platform for all machine control solutions.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/m/c/mc1.webp" alt="Leica DSX Utility Detection Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-mc1-3d-machine-control-software.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+              <div id="myModal13" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica iCON iCT30 Construction Layout Tool</h2>
+				<p>Increased complexity in construction projects and the strong trend towards digitalisation and Building Information Modelling (BIM) in the Building Construction industry make digital layout methods and processes crucial.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/i/c/ict30_reverse_update.webp" alt="Leica iCON iCT30 Construction Layout Tool" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-icon-ict30-construction-layout-tool.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal14" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica iCON pave concrete</h2>
+				<p>Contact us for price</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-icon-pave-concrete.webp" alt="Leica iCON pave concrete" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-icon-pave-concrete.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+             <div id="myModal15" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica Pegasus Construction</h2>
+				<p>The Leica Pegasus:Swift is a vehicle independent, mapping solution combining LiDAR and high resolution 360° seamless panoramic images for GIS based applications - utility right-of-way, mining , construction, city planning and clearances</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica_pegasus_construction_5.webp" alt="Leica Pegasus Construction" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-pegasus-construction.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+          <div id="myModal16" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica Pegasus TRK</h2>
+				<p>AUTONOMOUS : INTELLIGENT : SIMPLIFIED</p>
+                <img src="https://leica-geosystems.com/-/media/images/leicageosystems/products/yosemite/home/new%20images/leica%20pegasus%20trk_home_header_2480x750.ashx?h=750&la=en-GB&w=2480&hash=B7D3E9A3C0777CDC54BC9D07E6632A7D" alt="Leica Pegasus Construction" style="width: 100px; height: 100px;">
+                <p><a href="https://leica-geosystems.com/en-gb/products/leica-pegasus-trk" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal17" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica GVP716 Backpack carrying system</h2>
+				<p>Easy-to-mount backpack system for carrying all large TPS and GPS container including TS/MS60 containers</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-gvp716.webp" alt="Leica GVP716 Backpack carrying system" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-gvp716-backpack-carrying-system.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal18" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica RTC360 Laser Scanner</h2>
+				<p>Fast, agile and precise 3D reality capture solution</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-rtc360-front.webp" alt="Leica RTC360 Laser Scanner" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-rtc360-laser-scanner.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal19" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica BLK2GO Handheld Laser Scanner</h2>
+				<p>The blk2go handheld imaging laser scanner recreates spaces in 3d as you move. It captures images and dimensionally accurate point clouds in real-time and uses slam technology to record your trajectory through space.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/b/l/blk2go_side_camera_light.webp" alt="Leica BLK2GO Handheld Laser Scanner" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/blk2go.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+         <div id="myModal20" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>BLK247</h2>
+				<p>Smart 3D Surveillance System</p>
+                <img src="https://shop.leica-geosystems.com/sites/default/files/styles/before_after_photo/public/2020-11/BLK247-house-dusk_0.png?itok=_fTaInJV" alt="Leica BLK2GO Handheld Laser Scanner" style="width: 100px; height: 100px;">
+                <p><a href="https://shop.leica-geosystems.com/gb/leica-blk/blk247" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+             <div id="myModal21" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>GNSS QC Software</h2>
+				<p>Leica GNSS QC Software is for GPS/GLONASS quality control and data analysis. Leica GNSS QC is the first choice in quality monitoring software to compliment Leica GPS Spider or any other network reference station software.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/g/n/gnss_qc.webp" alt="GNSS QC Software" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/gnss-qc-software.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+              <div id="myModal22" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica SmartNet National GNSS Network Solution</h2>
+				<p>SmartNet is a 24/7, accurate, reliable and robust National GNSS Network solution, based on a common datum, for the entire positioning community of Great Britain.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/s/m/smartnet-main.webp" alt="Leica SmartNet National GNSS Network Solution" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-smartnet.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+           <div id="myModal23" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica TruView Cloud</h2>
+				<p>TruView is the industry leader for easily and intuitively sharing point cloud data, design models, mark-ups and more.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/t/r/truview_cloud.webp" alt="Leica TruView Cloud" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-truview-cloud.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+           <div id="myModal24" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>HxDR Digital Reality</h2>
+				<p>Reality Capture and Digital Twins in the Cloud</p>
+                <img src="https://hxdr.com/wp-content/uploads/2021/09/All3BLKDevices.png" alt="Leica TruView Cloud" style="width: 100px; height: 100px;">
+                <p><a href="https://hxdr.com/" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal25" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica Nova TM60 Monitoring Station</h2>
+				<p>Leica Geosystems’ new monitoring solution comes with a strong promise: real-time information and reports you can always rely on, helping you make informed decisions in time and on time.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-nova-ms60-right.webp" alt="Leica Nova TM60 Monitoring Station" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-nova-tm60.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal26" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica GeoMoS</h2>
+				<p>The Leica GeoMoS software provides a highly flexible automatic deformation monitoring system that is able to combine geodetic, geotechnical and meteorological sensors to match the needs of your monitoring project, whether it is large or small, temporary or permanent.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/g/e/geo_mos.webp" alt="Leica GeoMoS" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-geomos.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+           <div id="myModal27" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Amberg Rail VMS 3000</h2>
+				<p>Innovation of a proven principle for track works. High performance for long track sections. twin-trolley mode. Greatest flexibility under demanding project conditions,tripod mode.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/a/m/amberg_vms_3000.webp" alt="Amberg Rail VMS 3000" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/amberg-rail-vms-3000.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+           <div id="myModal28" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>EZiSYSTEM - User Training</h2>
+				<p>A major concern in the highways maintenance industry relates to continued strikes to buried utilities (electricity, gas, telecommunications, water etc.), their potential to seriously injure excavation teams and associated costs arising from utility repairs.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/e/z/ezisystem-training_1.webp" alt="EZiSYSTEM - User Training" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/ezisystem-user-training.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+            <div id="myModal29" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica Nova MS60 MultiStation</h2>
+				<p>The new version of Leica Nova MS60, the world’s first MultiStation, allows you to complete all surveying tasks with one instrument.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica-nova-ms60-right_1.webp" alt="MS60" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-nova-ms60-multistation.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+           <div id="myModal30" class="modal">
+			<div class="modal-content">
+                <img src="https://cdn.asp.events/CLIENT_QMJ_Publ_D7FED80C_5056_B733_495F9E29E2AD233F/sites/Hillhead-2020/media/libraries/exhibitors/215c6bb2-80e8-11eb-916-06dcb84e6686-logo.png" alt="SCCS Logo" style="width: 100px; height: 50px;">
+				<span class="close">&times;</span>
+                <h2>Leica AP20 AutoPole</h2>
+				<p>The Leica AP20 AutoPole is a unique smart solution for our automated total stations that boosts on-site productivity.</p>
+                <img src="https://www.sccssurvey.co.uk/media/catalog/product/cache/2412bf1066845f9fbbd3b1fa4251e6b8/l/e/leica_ap20_autopole.webp" alt="AP20" style="width: 100px; height: 100px;">
+                <p><a href="https://www.sccssurvey.co.uk/leica-ap20-autopole.html" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+	</div>
+	<script>
+        // Get the modal
+                var modal1 = document.getElementById("myModal1");
+		var modal2 = document.getElementById("myModal2");
+                var modal3 = document.getElementById("myModal3");
+                var modal4 = document.getElementById("myModal4");
+                var modal5 = document.getElementById("myModal5");
+                var modal6 = document.getElementById("myModal6");
+                var modal7 = document.getElementById("myModal7");
+                var modal8 = document.getElementById("myModal8");
+                var modal9 = document.getElementById("myModal9");
+                var modal10 = document.getElementById("myModal10");
+                var modal11 = document.getElementById("myModal11");
+                var modal12 = document.getElementById("myModal12");
+                var modal13 = document.getElementById("myModal13");
+                var modal14 = document.getElementById("myModal14");
+                var modal15 = document.getElementById("myModal15");
+                var modal16 = document.getElementById("myModal16");
+                var modal17 = document.getElementById("myModal17");
+                var modal18 = document.getElementById("myModal18");
+                var modal19 = document.getElementById("myModal19");
+                var modal20 = document.getElementById("myModal20");
+                var modal21 = document.getElementById("myModal21");
+                var modal22 = document.getElementById("myModal22");
+                var modal23 = document.getElementById("myModal23");
+                var modal24 = document.getElementById("myModal24");
+                var modal25 = document.getElementById("myModal25");
+                var modal26 = document.getElementById("myModal26");
+                var modal27 = document.getElementById("myModal27");
+                var modal28 = document.getElementById("myModal28");
+                var modal29 = document.getElementById("myModal29");
+                var modal30 = document.getElementById("myModal30");
+
+
+             // Get the button that opens the modal
+             var btn1 = document.getElementsByClassName("button1")[0];
+	         var btn2 = document.getElementsByClassName("button2")[0];
+             var btn3 = document.getElementsByClassName("button3")[0];
+             var btn4 = document.getElementsByClassName("button4")[0];
+             var btn5 = document.getElementsByClassName("button5")[0];
+             var btn6 = document.getElementsByClassName("button6")[0];
+             var btn7 = document.getElementsByClassName("button7")[0];
+             var btn8 = document.getElementsByClassName("button8")[0];
+             var btn9 = document.getElementsByClassName("button9")[0];
+             var btn10 = document.getElementsByClassName("button10")[0];
+             var btn11 = document.getElementsByClassName("button11")[0];
+             var btn12 = document.getElementsByClassName("button12")[0];
+             var btn13 = document.getElementsByClassName("button13")[0];
+             var btn14 = document.getElementsByClassName("button14")[0];
+             var btn15 = document.getElementsByClassName("button15")[0];
+             var btn16 = document.getElementsByClassName("button16")[0];
+             var btn17 = document.getElementsByClassName("button17")[0];
+             var btn18 = document.getElementsByClassName("button18")[0];
+             var btn19 = document.getElementsByClassName("button19")[0];
+             var btn20 = document.getElementsByClassName("button20")[0];
+             var btn21 = document.getElementsByClassName("button21")[0];
+             var btn22 = document.getElementsByClassName("button22")[0];
+             var btn23 = document.getElementsByClassName("button23")[0];
+             var btn24 = document.getElementsByClassName("button24")[0];
+             var btn25 = document.getElementsByClassName("button25")[0];
+             var btn26 = document.getElementsByClassName("button26")[0];
+             var btn27 = document.getElementsByClassName("button27")[0];
+             var btn28 = document.getElementsByClassName("button28")[0];
+             var btn29 = document.getElementsByClassName("button29")[0];
+             var btn30 = document.getElementsByClassName("button30")[0];
+     
+             
+             // Get the <span> element that closes the modal
+                var span1 = document.getElementsByClassName("close")[0];
+	            var span2 = document.getElementsByClassName("close")[1];
+                var span3 = document.getElementsByClassName("close")[2];
+                var span4 = document.getElementsByClassName("close")[3];
+                var span5 = document.getElementsByClassName("close")[4];
+                var span6 = document.getElementsByClassName("close")[5];
+                var span7 = document.getElementsByClassName("close")[6];
+                var span8 = document.getElementsByClassName("close")[7];
+                var span9 = document.getElementsByClassName("close")[8];
+                var span10 = document.getElementsByClassName("close")[9];
+                var span11 = document.getElementsByClassName("close")[10];
+                var span12 = document.getElementsByClassName("close")[11];
+                var span13 = document.getElementsByClassName("close")[12];
+                var span14 = document.getElementsByClassName("close")[13];
+                var span15 = document.getElementsByClassName("close")[14];
+                var span16 = document.getElementsByClassName("close")[15];
+                var span17 = document.getElementsByClassName("close")[16];
+                var span18 = document.getElementsByClassName("close")[17];
+                var span19 = document.getElementsByClassName("close")[18];
+                var span20 = document.getElementsByClassName("close")[19];
+                var span21 = document.getElementsByClassName("close")[20];
+                var span22 = document.getElementsByClassName("close")[21];
+                var span23 = document.getElementsByClassName("close")[22];
+                var span24 = document.getElementsByClassName("close")[23];
+                var span25 = document.getElementsByClassName("close")[24];
+                var span26 = document.getElementsByClassName("close")[25];
+                var span27 = document.getElementsByClassName("close")[26];
+                var span28 = document.getElementsByClassName("close")[27];
+                var span29 = document.getElementsByClassName("close")[28];
+                var span30 = document.getElementsByClassName("close")[29];
+
+             // When the user clicks the button, open the modal
+             btn1.onclick = function() {
+                 modal1.style.display = "block";
+             }
+              // When the user clicks the button, open the modal
+              btn2.onclick = function() {
+                 modal2.style.display = "block";
+             }
+              btn3.onclick = function() {
+                 modal3.style.display = "block";
+             }
+             btn4.onclick = function() {
+                 modal4.style.display = "block";
+             }
+             btn5.onclick = function() {
+                 modal5.style.display = "block";
+             }
+             btn6.onclick = function() {
+                 modal6.style.display = "block";
+             }
+             btn7.onclick = function() {
+                 modal7.style.display = "block";
+             }
+             btn8.onclick = function() {
+                 modal8.style.display = "block";
+             }
+             btn9.onclick = function() {
+                 modal9.style.display = "block";
+             }
+              btn10.onclick = function() {
+                 modal10.style.display = "block";
+             }
+             btn11.onclick = function() {
+                 modal11.style.display = "block";
+             }
+             btn12.onclick = function() {
+                 modal12.style.display = "block";
+             }
+             btn13.onclick = function() {
+                 modal13.style.display = "block";
+             }
+             btn14.onclick = function() {
+                 modal14.style.display = "block";
+             }
+             btn15.onclick = function() {
+                 modal15.style.display = "block";
+             }
+             btn16.onclick = function() {
+                 modal16.style.display = "block";
+             }
+             btn17.onclick = function() {
+                 modal17.style.display = "block";
+             }
+             btn18.onclick = function() {
+                 modal18.style.display = "block";
+             }
+             btn19.onclick = function() {
+                 modal19.style.display = "block";
+             }
+              btn20.onclick = function() {
+                 modal20.style.display = "block";
+             }
+             btn21.onclick = function() {
+                 modal21.style.display = "block";
+             }
+             btn22.onclick = function() {
+                 modal22.style.display = "block";
+             }
+             btn23.onclick = function() {
+                 modal23.style.display = "block";
+             }
+              btn24.onclick = function() {
+                 modal24.style.display = "block";
+             }
+              btn25.onclick = function() {
+                 modal25.style.display = "block";
+             }
+             btn26.onclick = function() {
+                 modal26.style.display = "block";
+             }
+             btn27.onclick = function() {
+                 modal27.style.display = "block";
+             }
+             btn28.onclick = function() {
+                 modal28.style.display = "block";
+             }
+             btn29.onclick = function() {
+                 modal29.style.display = "block";
+             }
+             btn30.onclick = function() {
+                 modal30.style.display = "block";
+             }
+             // When the user clicks on <span> (x), close the modal
+                 span1.onclick = function(event) {
+                 
+                 modal1.style.display = "none";
+             }
+             span2.onclick = function(event) {
+                 
+                 modal2.style.display = "none";
+             } 
+              span3.onclick = function(event) {
+                 
+                 modal3.style.display = "none";
+             }  
+              span4.onclick = function(event) {
+                 
+                 modal4.style.display = "none";
+             }  
+               span5.onclick = function(event) {
+                 
+                 modal5.style.display = "none";
+             } 
+               span6.onclick = function(event) {
+                 
+                 modal6.style.display = "none";
+             } 
+               span7.onclick = function(event) {
+                 
+                 modal7.style.display = "none";
+             } 
+                span8.onclick = function(event) {
+                
+                 modal8.style.display = "none";
+             } 
+                span9.onclick = function(event) {
+                
+                 modal9.style.display = "none";
+             } 
+                span10.onclick = function(event) {
+                
+                 modal10.style.display = "none";
+             } 
+                span11.onclick = function(event) {
+                 
+                 modal11.style.display = "none";
+             } 
+                span12.onclick = function(event) {
+                 
+                 modal12.style.display = "none";
+             } 
+                span13.onclick = function(event) {
+                 
+                 modal13.style.display = "none";
+             } 
+                span14.onclick = function(event) {
+                
+                 modal14.style.display = "none";
+             } 
+               span15.onclick = function(event) {
+                 
+                 modal15.style.display = "none";
+             } 
+                span16.onclick = function(event) {
+                 
+                 modal16.style.display = "none";
+             } 
+                span17.onclick = function(event) {
+                 
+                 modal17.style.display = "none";
+             } 
+                span18.onclick = function(event) {
+                 
+                 modal18.style.display = "none";
+             } 
+                span19.onclick = function(event) {
+                 
+                 modal19.style.display = "none";
+             } 
+                span20.onclick = function(event) {
+                 
+                 modal20.style.display = "none";
+             } 
+               span21.onclick = function(event) {
+                 
+                 modal21.style.display = "none";
+             } 
+               span22.onclick = function(event) {
+                 
+                 modal22.style.display = "none";
+             } 
+               span23.onclick = function(event) {
+                 
+                 modal23.style.display = "none";
+             } 
+                span24.onclick = function(event) {
+                 
+                 modal24.style.display = "none";
+             } 
+               span25.onclick = function(event) {
+                
+                 modal25.style.display = "none";
+             } 
+               span26.onclick = function(event) {
+                
+                 modal26.style.display = "none";
+             } 
+               span27.onclick = function(event) {
+                 
+                 modal27.style.display = "none";
+             } 
+               span28.onclick = function(event) {
+            
+                 modal28.style.display = "none";
+             } 
+              span29.onclick = function(event) {
+            
+                 modal29.style.display = "none";
+             } 
+              span30.onclick = function(event) {
+            
+                 modal30.style.display = "none";
+             } 
+         </script>
+</body>
+</html>
